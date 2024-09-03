@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.StartPage"
+             Title="StartPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log Out" Clicked="LogOut"/>
+        <!-- the LogOut Button-->
+    </ContentPage.ToolbarItems>
+    <Grid BackgroundColor="#A59FF9" >
+        <ListView
+        x:Name="listView"
+        Margin="30,50,300,50"
+        ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!-- This is used to show the notes from the database into a list where you can click on them for editing -->
+                    <TextCell Text="{Binding Text}"
+                          Detail="{Binding Date}" 
+                              />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <Button Text="Add Notes" Margin="100,10,100,550" BackgroundColor="Violet" TextColor="white" FontAttributes="bold" CornerRadius="30" Clicked="OnNoteAddedClicked" />
+    </Grid>
+</ContentPage>
+<!-- Reference: https://docs.microsoft.com/en-us/xamarin/get-started/quickstarts/multi-page?pivots=windows -->

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.NoteEntryPage"
+             Title="Note Entry">
+    <StackLayout BackgroundColor="#A59FF9">
+        <!-- The placeholder for the text-->
+        <Editor Margin="20" Placeholder="Enter your note" Text="{Binding Text}" HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Save" Margin="30,10,10,10" BackgroundColor="#FF8A2BE2" TextColor="white" FontAttributes="bold" CornerRadius="30" Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1" Text="Delete" Margin="10,10,30,10" BackgroundColor="#FF8A2BE2" TextColor="white" FontAttributes="bold" CornerRadius="30" Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+        <!-- Making buttons for delete and add-->
+    </StackLayout>
+</ContentPage>
+<!--https://docs.microsoft.com/en-us/xamarin/get-started/quickstarts/multi-page?pivots=windows -->

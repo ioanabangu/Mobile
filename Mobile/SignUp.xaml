@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.SignUp"
+             Title="SignUp">
+    <ContentPage.Content>
+        <Grid>
+            <BoxView x:Name="bdGradient" Scale="4" AnchorX="1" AnchorY="0">
+                <BoxView.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Purple" Offset="0.3"/>
+                        <GradientStop Color="CornflowerBlue" Offset="0.5" />
+                        <GradientStop Color="pink" Offset="0.7" />
+                        <GradientStop Color="FloralWhite" Offset="1.0" />
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+            <!--creating a gradient for the background area -->
+            <StackLayout>
+                <!-- Creating a frame for placeholders-->
+                <Frame BackgroundColor="White" HorizontalOptions="FillAndExpand" Margin="40,50,40,50" VerticalOptions="Center">
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Sign Up" TextColor="black" FontSize="25" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Margin="0,25,0,0">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" Margin="7" >
+                                    </Frame>
+                                    <Entry Placeholder="UserName" TextColor="#FF8A2BE2" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"  x:Name="EntryUserName" />
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,15,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" Margin="7" >
+                                    </Frame>
+                                    <Entry Placeholder="Email" TextColor="#FF8A2BE2" HorizontalOptions="FillAndExpand" Margin="0,0,15,0" x:Name="EntryEmail"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,15,0,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="AliceBlue" CornerRadius="50" HeightRequest="35" WidthRequest="35" Padding="0" HorizontalOptions="Start" Margin="7" >
+                                    </Frame>
+                                    <Entry Placeholder="Password" IsPassword="True" TextColor="#FF8A2BE2" HorizontalOptions="FillAndExpand" Margin="0,0,15,0" x:Name="EntryPassword"/>
+                                </StackLayout>
+                            </Frame>
+                            <!-- buttons that takes you to the login page -->
+                        </StackLayout>
+
+                        <Button Text="Sign Up" BackgroundColor="#FF8A2BE2" TextColor="white" FontAttributes="bold" CornerRadius="30" Clicked="Start"/>
+                        <Button Text="I already have an account" BackgroundColor="Transparent" TextColor="#FF8A2BE2" HorizontalOptions="Center" FontAttributes="Bold" Clicked="LogIn"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
